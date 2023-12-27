@@ -1,0 +1,474 @@
+# Einige beschreibende Titel.
+# Copyright (C) JAHRESZAHL, DER COPYRIGHT-INHABER DES PAKETS
+# Diese Datei wird unter der gleichen Lizenz wie das PAKET-Paket verteilt.
+# ERSTER AUTOR <EMAIL@ADRESSE>, JAHRESZAHL.
+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-25 03:10+0300\n"
+"PO-Revision-Date: JAHRESZAHL-MO-TAG STUNDE:MINUTE+ZONE\n"
+"Last-Translator: VOLLSTÄNDIGER NAME <EMAIL@ADRESSE>\n"
+"Language-Team: SPRACHE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\about\templates\about\faq_list.html:13
+#: .\blog\templates\blog\post_detail.html:10
+#: .\blog\templates\blog\post_list.html:15
+#: .\car\templates\car\car_detail.html:15
+#: .\settings\templates\settings\contact.html:13
+#: .\settings\templates\settings\dashboard.html:11
+#: .\settings\templates\settings\home_search.html:16 .\templates\base.html:44
+msgid "Home"
+msgstr "Startseite der Website"
+
+#: .\about\templates\about\faq_list.html:13 .\templates\base.html:46
+#: .\templates\base.html:111
+msgid "About"
+msgstr "Über uns"
+
+#: .\about\templates\about\faq_list.html:14
+#, fuzzy
+#| msgid "About"
+msgid "About Us"
+msgstr "Über uns"
+
+#: .\about\templates\about\faq_list.html:31
+msgid "What we do"
+msgstr "Was wir tun"
+
+#: .\about\templates\about\faq_list.html:35
+msgid "Our mission"
+msgstr "Unsere Mission"
+
+#: .\about\templates\about\faq_list.html:38
+msgid "Our goal"
+msgstr "Unser Ziel"
+
+#: .\about\templates\about\faq_list.html:77
+msgid "FAQS"
+msgstr "FAQs"
+
+#: .\about\templates\about\faq_list.html:78
+msgid "Frequently"
+msgstr "Häufig"
+
+#: .\about\templates\about\faq_list.html:78
+msgid "Ask Question"
+msgstr "Frage stellen"
+
+#: .\blog\models.py:11
+msgid "author"
+msgstr "Autor"
+
+#: .\blog\models.py:12
+msgid "title"
+msgstr "Titel"
+
+#: .\blog\models.py:13
+msgid "tag"
+msgstr "Schlagwort"
+
+#: .\blog\models.py:14
+msgid "image"
+msgstr "Bild"
+
+#: .\blog\models.py:15
+msgid "created at"
+msgstr "erstellt am"
+
+#: .\blog\models.py:16
+msgid "description"
+msgstr "Beschreibung"
+
+#: .\blog\models.py:17
+msgid "category"
+msgstr "Kategorie"
+
+#: .\blog\models.py:18
+msgid "url"
+msgstr "URL"
+
+#: .\blog\templates\blog\post_detail.html:10
+#: .\blog\templates\blog\post_list.html:15 .\templates\base.html:50
+msgid "Blog"
+msgstr "Blog"
+
+#: .\blog\templates\blog\post_detail.html:11
+#: .\blog\templates\blog\post_list.html:16
+#: .\blog\templates\blog\post_list.html:33
+#: .\settings\templates\settings\home.html:249
+msgid "Tips"
+msgstr "Tipps"
+
+#: .\blog\templates\blog\post_detail.html:11
+#: .\blog\templates\blog\post_list.html:17
+#: .\settings\templates\settings\home.html:249
+msgid "Articles"
+msgstr "Artikel"
+
+#: .\blog\templates\blog\post_detail.html:33
+msgid "Comments"
+msgstr "Kommentare"
+
+#: .\blog\templates\blog\post_detail.html:49
+#, fuzzy
+#| msgid "category"
+msgid "Categories"
+msgstr "Kategorie"
+
+#: .\blog\templates\blog\post_detail.html:57
+#: .\settings\templates\settings\home.html:248
+msgid "Recent Blog"
+msgstr "Letzter Blog"
+
+#: .\blog\templates\blog\post_detail.html:73
+msgid "Tag Cloud"
+msgstr "Schlagwort-Wolke"
+
+#: .\blog\templates\blog\post_list.html:33
+msgid "Travel"
+msgstr "Reisen"
+
+#: .\car\templates\car\car_detail.html:16
+#: .\settings\templates\settings\home_search.html:16
+msgid "Car"
+msgstr "Auto"
+
+#: .\car\templates\car\car_detail.html:17
+msgid "Car Details"
+msgstr "Fahrzeugdetails"
+
+#: .\car\templates\car\car_detail.html:40
+#: .\settings\templates\settings\home.html:78
+#: .\settings\templates\settings\home.html:114
+msgid "Rating"
+msgstr "Bewertung"
+
+#: .\car\templates\car\car_detail.html:40
+#, fuzzy
+#| msgid "author"
+msgid "Author"
+msgstr "Autor"
+
+#: .\car\templates\car\car_detail.html:40
+msgid "FeedBack"
+msgstr "Rückmeldung"
+
+#: .\car\templates\car\car_detail.html:46
+msgid " Our Best Cars"
+msgstr " Unsere besten Autos"
+
+#: .\car\templates\car\car_detail.html:56
+msgid " Rating"
+msgstr " Bewertung"
+
+#: .\car\templates\car\car_detail.html:63
+msgid " Book Now Call"
+msgstr " Jetzt anrufen, um zu buchen"
+
+#: .\car\templates\car\car_detail.html:66
+msgid " Book Now Watsapp"
+msgstr "Jetzt buchen per Whatsapp"
+
+#: .\settings\templates\settings\contact.html:13
+#: .\settings\templates\settings\dashboard.html:11
+#, fuzzy
+msgid "Contact"
+msgstr "Kontaktieren Sie uns"
+
+#: .\settings\templates\settings\contact.html:14 .\templates\base.html:47
+msgid "Contact Us"
+msgstr "Kontaktieren Sie uns"
+
+#: .\settings\templates\settings\contact.html:24
+msgid "Contact Information"
+msgstr "Kontaktinformationen"
+
+#: .\settings\templates\settings\contact.html:28
+msgid "Address"
+msgstr "Adresse"
+
+#: .\settings\templates\settings\contact.html:31
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\settings\templates\settings\contact.html:34
+msgid "Email"
+msgstr "E-Mail"
+
+#: .\settings\templates\settings\dashboard.html:12
+#: .\settings\templates\settings\home_search.html:47 .\templates\base.html:49
+msgid "Dashboard"
+msgstr "Instrumententafel"
+
+#: .\settings\templates\settings\home.html:13
+msgid "Search what do you prefer"
+msgstr "Suchen Sie, was Sie bevorzugen"
+
+#: .\settings\templates\settings\home.html:20
+msgid "Search"
+msgstr "Suche"
+
+#: .\settings\templates\settings\home.html:23
+msgid "Or browse the Type"
+msgstr "Oder durchsuchen Sie den Typ"
+
+#: .\settings\templates\settings\home.html:31
+msgid "Explore"
+msgstr "Erkunden"
+
+#: .\settings\templates\settings\home.html:56
+msgid "Special Offers"
+msgstr "Sonderangebote"
+
+#: .\settings\templates\settings\home.html:57
+msgid "Popular Cars"
+msgstr "Beliebte Autos"
+
+#: .\settings\templates\settings\home.html:80
+#: .\settings\templates\settings\home.html:116
+#: .\settings\templates\settings\home_search.html:51
+msgid "AED"
+msgstr "AED"
+
+#: .\settings\templates\settings\home.html:80
+#: .\settings\templates\settings\home.html:116
+#: .\settings\templates\settings\home_search.html:51
+msgid "night"
+msgstr "Nacht"
+
+#: .\settings\templates\settings\home.html:85
+#: .\settings\templates\settings\home.html:122
+msgid "Dubai"
+msgstr "Dubai"
+
+#: .\settings\templates\settings\home.html:85
+#: .\settings\templates\settings\home.html:122
+msgid "UAE"
+msgstr "VAE"
+
+#: .\settings\templates\settings\home.html:86
+#: .\settings\templates\settings\home.html:123
+msgid "Book Now"
+msgstr "Jetzt buchen"
+
+#: .\settings\templates\settings\home.html:89
+#: .\settings\templates\settings\home.html:89
+#: .\settings\templates\settings\home.html:126
+msgid "Discover"
+msgstr "Entdecken"
+
+#: .\settings\templates\settings\home.html:141
+msgid "Some fun facts"
+msgstr "Einige interessante Fakten"
+
+#: .\settings\templates\settings\home.html:151
+msgid "Happy Customers"
+msgstr "Zufriedene Kunden"
+
+#: .\settings\templates\settings\home.html:159
+msgid "Places"
+msgstr "Orte"
+
+#: .\settings\templates\settings\home.html:167
+msgid "Partner"
+msgstr "Partner"
+
+#: .\settings\templates\settings\home.html:175
+msgid "car"
+msgstr "Auto"
+
+#: .\settings\templates\settings\home.html:192
+msgid "Why"
+msgstr "Warum"
+
+#: .\settings\templates\settings\home.html:192
+msgid "Choose Us?"
+msgstr "Wählen Sie uns?"
+
+#: .\settings\templates\settings\home.html:193
+msgid ""
+"We offer economical and instant car rental services in Dubai and the United "
+"Arab Emirates. We have extensive experience in car rentals in Dubai, "
+"providing regular maintenance for all rental cars throughout the year. We "
+"offer special deals for women's car rentals as well as discounts for "
+"students."
+msgstr ""
+"Wir bieten wirtschaftliche und sofortige Autovermietungsdienste in Dubai und "
+"den Vereinigten Arabischen Emiraten an. Wir haben umfangreiche Erfahrung im "
+"Autoverleih in Dubai und bieten ganzjährig regelmäßige Wartung für alle "
+"Mietfahrzeuge an. Wir bieten spezielle Angebote für die Autovermietung von "
+"Frauen sowie Rabatte für Studenten."
+
+#: .\settings\templates\settings\home.html:194
+#, python-format
+msgid ""
+"We have daily offers on cars for rent in Dubai all year round with a "
+"discount of up to 50%% at cheap and economical prices."
+msgstr ""
+"Wir haben das ganze Jahr über tägliche Angebote für die Autovermietung in "
+"Dubai mit einem Rabatt von bis zu 50%% zu günstigen und wirtschaftlichen "
+"Preisen."
+
+#: .\settings\templates\settings\home.html:196
+msgid "Read more"
+msgstr "Mehr lesen"
+
+#: .\settings\templates\settings\home.html:201
+msgid "Our clients Say"
+msgstr "Unsere Kunden sagen"
+
+#: .\settings\templates\settings\home.html:213
+msgid ""
+"I've had an exceptional experience with Speed Switch Car Rentals. Their "
+"fleet is modern, well-maintained, and offers a variety of options to suit "
+"different needs. The customer service is top-notch - their staff is not only "
+"friendly but also knowledgeable, providing helpful guidance on selecting the "
+"best vehicle for my requirements. Additionally, their booking process is "
+"seamless, making it convenient to reserve a car hassle-free. I appreciate "
+"their commitment to ensuring a smooth and enjoyable experience, making them "
+"my go-to choice whenever I need a reliable car rental service."
+msgstr ""
+"Ich hatte eine außergewöhnliche Erfahrung mit Speed Switch Autovermietungen. "
+"Ihre Flotte ist modern, gepflegt und bietet eine Vielzahl von Optionen, um "
+"verschiedenen Bedürfnissen gerecht zu werden. Der Kundenservice ist "
+"erstklassig - ihr Personal ist nicht nur freundlich, sondern auch kompetent "
+"und bietet hilfreiche Beratung bei der Auswahl des besten Fahrzeugs für meine "
+"Anforderungen. Darüber hinaus ist ihr Buchungsprozess nahtlos, was die "
+"Reservierung eines Autos bequem und stressfrei macht. Ich schätze ihr "
+"Engagement für ein reibungsloses und angenehmes Erlebnis und wähle sie immer, "
+"wenn ich einen zuverlässigen Autovermietservice benötige."
+
+#: .\settings\templates\settings\home.html:216
+msgid "client from london"
+msgstr "Kunde aus London"
+
+#: .\settings\templates\settings\home.html:228
+msgid ""
+"Speed Switch Car Rental has truly impressed me with their exceptional "
+"service. From the moment I made my reservation to the drop-off, everything "
+"was smooth and efficient. Their fleet consists of top-quality vehicles that "
+"are not only reliable but also well-maintained, ensuring a comfortable and "
+"safe drive every time."
+msgstr ""
+"Speed Switch Autovermietung hat mich wirklich mit ihrem außergewöhnlichen "
+"Service beeindruckt. Vom Moment der Reservierung bis zur Abgabe verlief "
+"alles reibungslos und effizient. Ihre Flotte besteht aus hochwertigen "
+"Fahrzeugen, die nicht nur zuverlässig, sondern auch gut gepflegt sind und "
+"bei jeder Fahrt einen komfortablen und sicheren Fahrspaß gewährleisten."
+
+#: .\settings\templates\settings\home.html:230
+msgid "Guest from syria"
+msgstr "Gast aus Syrien"
+
+#: .\settings\templates\settings\home.html:278
+msgid "Subcribe to our Newsletter"
+msgstr "Abonnieren Sie unseren Newsletter"
+
+#: .\settings\templates\settings\home.html:292
+msgid "Thanks Subcribed to our Newsletter"
+msgstr "Vielen Dank für das Abonnieren unseres Newsletters"
+
+#: .\settings\templates\settings\home.html:307 .\templates\base.html:115
+msgid "Best Price Guarantee"
+msgstr "Bestpreisgarantie"
+
+#: .\settings\templates\settings\home.html:318
+msgid "Customer Love Us"
+msgstr "Kunden lieben uns"
+
+#: .\settings\templates\settings\home.html:329
+msgid "Best Car Rent Agent"
+msgstr "Bester Autovermietservice"
+
+#: .\settings\templates\settings\home.html:340
+msgid "Our Dedicated Support"
+msgstr "Unser engagierter Support"
+
+#: .\settings\templates\settings\home_search.html:17
+msgid "Cars"
+msgstr "Autos"
+
+#: .\settings\templates\settings\home_search.html:59
+msgid "Book Now Call"
+msgstr "Jetzt anrufen und buchen"
+
+#: .\settings\templates\settings\home_search.html:75
+msgid "No Result please choise another type or contact with us"
+msgstr ""
+"Kein Ergebnis, bitte wählen Sie einen anderen Typ oder kontaktieren Sie uns"
+
+#: .\templates\base.html:77
+msgid "Call Now"
+msgstr "Jetzt anrufen"
+
+#: .\templates\base.html:81
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: .\templates\base.html:109
+msgid "Information"
+msgstr "Informationen"
+
+#: .\templates\base.html:112
+msgid "Service"
+msgstr "Service"
+
+#: .\templates\base.html:113
+msgid "Terms and Conditions"
+msgstr "Allgemeine Geschäftsbedingungen"
+
+#: .\templates\base.html:114
+msgid "Become a partner"
+msgstr "Werden Sie Partner"
+
+#: .\templates\base.html:116
+msgid "Privacy and Policy"
+msgstr "Datenschutzrichtlinie"
+
+#: .\templates\base.html:122
+msgid "Customer Support"
+msgstr "Kundensupport"
+
+#: .\templates\base.html:124
+msgid "FAQ"
+msgstr "FAQ"
+
+#: .\templates\base.html:125
+msgid "Payment Option"
+msgstr "Zahlungsoptionen"
+
+#: .\templates\base.html:126
+msgid "Booking Tips"
+msgstr "Buchungstipps"
+
+#: .\templates\base.html:127
+msgid "How it works"
+msgstr "Wie es funktioniert"
+
+#: .\templates\base.html:134
+msgid "Have a Questions?"
+msgstr "Haben Sie Fragen?"
+
+#: .\templates\base.html:155
+msgid "Copyright"
+msgstr "Urheberrecht"
+
+#: .\templates\base.html:155
+msgid "All rights reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#: .\templates\base.html:155
+msgid "This website is made by"
+msgstr "Diese Website wurde erstellt von"
+
+#: .\templates\base.html:155
+msgid "Bilal Qwider"
+msgstr "Bilal Qwider"

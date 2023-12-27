@@ -1,0 +1,482 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-25 03:08+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\about\templates\about\faq_list.html:13
+#: .\blog\templates\blog\post_detail.html:10
+#: .\blog\templates\blog\post_list.html:15
+#: .\car\templates\car\car_detail.html:15
+#: .\settings\templates\settings\contact.html:13
+#: .\settings\templates\settings\dashboard.html:11
+#: .\settings\templates\settings\home_search.html:16 .\templates\base.html:44
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: .\about\templates\about\faq_list.html:13 .\templates\base.html:46
+#: .\templates\base.html:111
+msgid "About"
+msgstr "عن الموقع"
+
+#: .\about\templates\about\faq_list.html:14
+#, fuzzy
+#| msgid "About"
+msgid "About Us"
+msgstr "عن الموقع"
+
+#: .\about\templates\about\faq_list.html:31
+msgid "What we do"
+msgstr "ما نقوم به"
+
+#: .\about\templates\about\faq_list.html:35
+msgid "Our mission"
+msgstr "مهمتنا"
+
+#: .\about\templates\about\faq_list.html:38
+msgid "Our goal"
+msgstr "هدفنا"
+
+#: .\about\templates\about\faq_list.html:77
+msgid "FAQS"
+msgstr "FAQS"
+
+#: .\about\templates\about\faq_list.html:78
+msgid "Frequently"
+msgstr "بشكل متكرر"
+
+#: .\about\templates\about\faq_list.html:78
+msgid "Ask Question"
+msgstr "اسأل سؤال"
+
+#: .\blog\models.py:11
+msgid "author"
+msgstr "المؤلف"
+
+#: .\blog\models.py:12
+msgid "title"
+msgstr "العنوان"
+
+#: .\blog\models.py:13
+msgid "tag"
+msgstr "الإشارة"
+
+#: .\blog\models.py:14
+msgid "image"
+msgstr "الصورة"
+
+#: .\blog\models.py:15
+msgid "created at"
+msgstr "تاريخ الإنشاء"
+
+#: .\blog\models.py:16
+msgid "description"
+msgstr "الوصف"
+
+#: .\blog\models.py:17
+msgid "category"
+msgstr "الفئة"
+
+#: .\blog\models.py:18
+msgid "url"
+msgstr "الرابط"
+
+#: .\blog\templates\blog\post_detail.html:10
+#: .\blog\templates\blog\post_list.html:15 .\templates\base.html:50
+msgid "Blog"
+msgstr "المدونة"
+
+#: .\blog\templates\blog\post_detail.html:11
+#: .\blog\templates\blog\post_list.html:16
+#: .\blog\templates\blog\post_list.html:33
+#: .\settings\templates\settings\home.html:249
+msgid "Tips"
+msgstr "نصائح"
+
+#: .\blog\templates\blog\post_detail.html:11
+#: .\blog\templates\blog\post_list.html:17
+#: .\settings\templates\settings\home.html:249
+msgid "Articles"
+msgstr "مقالات"
+
+#: .\blog\templates\blog\post_detail.html:33
+msgid "Comments"
+msgstr "تعليقات"
+
+#: .\blog\templates\blog\post_detail.html:49
+#, fuzzy
+#| msgid "category"
+msgid "Categories"
+msgstr "الفئة"
+
+#: .\blog\templates\blog\post_detail.html:57
+#: .\settings\templates\settings\home.html:248
+msgid "Recent Blog"
+msgstr "المدونة الاخيرة"
+
+#: .\blog\templates\blog\post_detail.html:73
+msgid "Tag Cloud"
+msgstr "العلامات"
+
+#: .\blog\templates\blog\post_list.html:33
+msgid "Travel"
+msgstr "سفر"
+
+#: .\car\templates\car\car_detail.html:16
+#: .\settings\templates\settings\home_search.html:16
+msgid "Car"
+msgstr "سيارة"
+
+#: .\car\templates\car\car_detail.html:17
+msgid "Car Details"
+msgstr "تفاصيل السيارة"
+
+#: .\car\templates\car\car_detail.html:40
+#: .\settings\templates\settings\home.html:78
+#: .\settings\templates\settings\home.html:114
+msgid "Rating"
+msgstr "التقييم"
+
+#: .\car\templates\car\car_detail.html:40
+#, fuzzy
+#| msgid "author"
+msgid "Author"
+msgstr "المؤلف"
+
+#: .\car\templates\car\car_detail.html:40
+msgid "FeedBack"
+msgstr "ملاحظات"
+
+#: .\car\templates\car\car_detail.html:46
+msgid " Our Best Cars"
+msgstr "أفضل سياراتنا"
+
+#: .\car\templates\car\car_detail.html:56
+msgid " Rating"
+msgstr "التقييم"
+
+#: .\car\templates\car\car_detail.html:63
+msgid " Book Now Call"
+msgstr "اتصل الآن"
+
+#: .\car\templates\car\car_detail.html:66
+msgid " Book Now Watsapp"
+msgstr " وتساب"
+
+#: .\settings\templates\settings\contact.html:13
+#: .\settings\templates\settings\dashboard.html:11
+#, fuzzy
+#| msgid "Contact Us"
+msgid "Contact"
+msgstr "إتصل بنا"
+
+#: .\settings\templates\settings\contact.html:14 .\templates\base.html:47
+msgid "Contact Us"
+msgstr "إتصل بنا"
+
+#: .\settings\templates\settings\contact.html:24
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
+
+#: .\settings\templates\settings\contact.html:28
+msgid "Address"
+msgstr "العنوان"
+
+#: .\settings\templates\settings\contact.html:31
+msgid "Phone"
+msgstr "الهاتف"
+
+#: .\settings\templates\settings\contact.html:34
+msgid "Email"
+msgstr "الايميل"
+
+#: .\settings\templates\settings\dashboard.html:12
+#: .\settings\templates\settings\home_search.html:47 .\templates\base.html:49
+msgid "Dashboard"
+msgstr "لوحة عرّض"
+
+#: .\settings\templates\settings\home.html:13
+msgid "Search what do you prefer"
+msgstr "ابحث عن ما تفضله"
+
+#: .\settings\templates\settings\home.html:20
+msgid "Search"
+msgstr ""
+
+#: .\settings\templates\settings\home.html:23
+msgid "Or browse the Type"
+msgstr "أو تصفح النوع"
+
+#: .\settings\templates\settings\home.html:31
+msgid "Explore"
+msgstr "استكشف"
+
+#: .\settings\templates\settings\home.html:56
+msgid "Special Offers"
+msgstr "عروض خاصة"
+
+#: .\settings\templates\settings\home.html:57
+msgid "Popular Cars"
+msgstr "سيارات الأكثر شيوعاً"
+
+#: .\settings\templates\settings\home.html:80
+#: .\settings\templates\settings\home.html:116
+#: .\settings\templates\settings\home_search.html:51
+msgid "AED"
+msgstr "درهم اماراتي"
+
+#: .\settings\templates\settings\home.html:80
+#: .\settings\templates\settings\home.html:116
+#: .\settings\templates\settings\home_search.html:51
+msgid "night"
+msgstr "الليلة"
+
+#: .\settings\templates\settings\home.html:85
+#: .\settings\templates\settings\home.html:122
+msgid "Dubai"
+msgstr "دبي"
+
+#: .\settings\templates\settings\home.html:85
+#: .\settings\templates\settings\home.html:122
+msgid "UAE"
+msgstr "الإمارات العربية المتحدة"
+
+#: .\settings\templates\settings\home.html:86
+#: .\settings\templates\settings\home.html:123
+msgid "Book Now"
+msgstr "احجز الأن"
+
+#: .\settings\templates\settings\home.html:89
+#: .\settings\templates\settings\home.html:126
+#: .\settings\templates\settings\home_search.html:67
+msgid "Discover"
+msgstr "اكتشف"
+
+#: .\settings\templates\settings\home.html:141
+msgid "Some fun facts"
+msgstr "بعض الحقائق الممتعة"
+
+#: .\settings\templates\settings\home.html:151
+msgid "Happy Customers"
+msgstr "عملاء سعداء"
+
+#: .\settings\templates\settings\home.html:159
+msgid "Places"
+msgstr "الأماكن"
+
+#: .\settings\templates\settings\home.html:167
+msgid "Partner"
+msgstr "شريك"
+
+#: .\settings\templates\settings\home.html:175
+msgid "car"
+msgstr "سيارة"
+
+#: .\settings\templates\settings\home.html:192
+msgid "Why"
+msgstr "لماذا"
+
+#: .\settings\templates\settings\home.html:192
+msgid "Choose Us?"
+msgstr "تختارنا ؟"
+
+#: .\settings\templates\settings\home.html:193
+msgid ""
+"We offer economical and instant car rental services in Dubai and the United "
+"Arab Emirates. We have extensive experience in car rentals in Dubai, "
+"providing regular maintenance for all rental cars throughout the year. We "
+"offer special deals for women's car rentals as well as discounts for "
+"students."
+msgstr ""
+"نحن نقدم خدمات تأجير سيارات اقتصادية وفورية في دبي ودولة الإمارات العربية "
+"المتحدة. لدينا خبرة واسعة في تأجير السيارات في دبي، ونوفر صيانة منتظمة لجميع "
+"السيارات المستأجرة على مدار العام. نحن نقدم عروضًا خاصة لتأجير السيارات "
+"للنساء، بالإضافة إلى خصومات للطلاب."
+
+#: .\settings\templates\settings\home.html:194
+#, python-format
+msgid ""
+"We have daily offers on cars for rent in Dubai all year round with a "
+"discount of up to 50%% at cheap and economical prices."
+msgstr ""
+"لدينا عروض يومية على تأجير السيارات في دبي على مدار العام بخصومات تصل إلى "
+"50٪ بأسعار رخيصة واقتصادية."
+
+#: .\settings\templates\settings\home.html:196
+msgid "Read more"
+msgstr "قراءة المزيد"
+
+#: .\settings\templates\settings\home.html:201
+msgid "Our clients Say"
+msgstr "يقول عملاؤنا"
+
+
+#: .\settings\templates\settings\home.html:213
+msgid ""
+"I've had an exceptional experience with Speed Switch Car Rentals. Their "
+"fleet is modern, well-maintained, and offers a variety of options to suit "
+"different needs. The customer service is top-notch - their staff is not only "
+"friendly but also knowledgeable, providing helpful guidance on selecting the "
+"best vehicle for my requirements. Additionally, their booking process is "
+"seamless, making it convenient to reserve a car hassle-free. I appreciate "
+"their commitment to ensuring a smooth and enjoyable experience, making them "
+"my go-to choice whenever I need a reliable car rental service."
+msgstr ""
+"لقد حظيت بتجربة استثنائية مع شركة سبيد سويتش لتأجير السيارات. الأسطول حديث "
+"ويتم صيانته جيدًا ويقدم مجموعة متنوعة من الخيارات التي تناسب احتياجات مختلفة. "
+"خدمة العملاء على أعلى مستوى - فريق العمل ليس فقط ودودًا ولكن أيضًا على دراية، "
+"ويقدم إرشادات مفيدة حول اختيار أفضل مركبة تلبي متطلباتي. بالإضافة إلى ذلك، "
+"فإن عملية الحجز لديهم سلسة، مما يجعل من السهل حجز سيارة خالية من المتاعب. "
+"أنا أقدر التزامهم بضمان تجربة سلسة وممتعة، مما يجعلهم خياري المفضل عندما "
+"أحتاج إلى خدمة تأجير سيارات موثوقة."
+
+#: .\settings\templates\settings\home.html:216
+#, fuzzy
+#| msgid "Guest from London"
+msgid "client from london"
+msgstr "ضيف من لندن"
+
+#: .\settings\templates\settings\home.html:228
+msgid ""
+"Speed Switch Car Rental has truly impressed me with their exceptional "
+"service. From the moment I made my reservation to the drop-off, everything "
+"was smooth and efficient. Their fleet consists of top-quality vehicles that "
+"are not only reliable but also well-maintained, ensuring a comfortable and "
+"safe drive every time."
+msgstr ""
+"تأجير سيارات Speed Switch حقا أثار انبهاري بخدمتهم الاستثنائية. منذ لحظة "
+"حجزي حتى التسليم، كان كل شيء سلسًا وفعالًا. يتكون أسطولهم من مركبات عالية "
+"الجودة ليست فقط موثوقة ولكن أيضًا مُحافظ عليها جيدًا، مما يضمن قيادة مريحة "
+"وآمنة في كل مرة."
+
+#: .\settings\templates\settings\home.html:230
+#, fuzzy
+#| msgid "Client from Syria"
+msgid "Guest from syria"
+msgstr "عميل من سوريا"
+
+#: .\settings\templates\settings\home.html:278
+msgid "Subcribe to our Newsletter"
+msgstr "اشترك في رسالتنا الإخبارية"
+
+#: .\settings\templates\settings\home.html:292
+msgid "Thanks Subcribed to our Newsletter"
+msgstr "شكرا لك على الاشنراك  "
+
+#: .\settings\templates\settings\home.html:307 .\templates\base.html:115
+msgid "Best Price Guarantee"
+msgstr "أفضل ضمان للسعر"
+
+#: .\settings\templates\settings\home.html:318
+msgid "Customer Love Us"
+msgstr "العميل يحبنا"
+
+#: .\settings\templates\settings\home.html:329
+msgid "Best Car Rent Agent"
+msgstr "أفضل وكيل إيجار سيارة"
+
+#: .\settings\templates\settings\home.html:340
+msgid "Our Dedicated Support"
+msgstr "دعمنا المتفاني"
+
+#: .\settings\templates\settings\home_search.html:17
+msgid "Cars"
+msgstr "سيارات"
+
+#: .\settings\templates\settings\home_search.html:59
+msgid "Book Now Call"
+msgstr "اتصل الآن"
+
+#: .\settings\templates\settings\home_search.html:75
+msgid "No Result please choise another type or contact with us"
+msgstr "لا نتيجة يرجى اختيار نوع آخر أو الاتصال بنا"
+
+#: .\templates\base.html:77
+msgid "Call Now"
+msgstr "اتصل الآن"
+
+#: .\templates\base.html:81
+msgid "WhatsApp"
+msgstr "وتساب"
+
+#: .\templates\base.html:109
+msgid "Information"
+msgstr "معلومات"
+
+#: .\templates\base.html:112
+msgid "Service"
+msgstr "الخدمة"
+
+#: .\templates\base.html:113
+msgid "Terms and Conditions"
+msgstr "الشروط والأحكام"
+
+#: .\templates\base.html:114
+msgid "Become a partner"
+msgstr "كن شريكًا"
+
+#: .\templates\base.html:116
+msgid "Privacy and Policy"
+msgstr "الخصوصية والسياسة"
+
+#: .\templates\base.html:122
+msgid "Customer Support"
+msgstr "دعم العملاء"
+
+#: .\templates\base.html:124
+msgid "FAQ"
+msgstr "FAQ"
+
+#: .\templates\base.html:125
+msgid "Payment Option"
+msgstr "خيار الدفع"
+
+#: .\templates\base.html:126
+msgid "Booking Tips"
+msgstr "نصائح الحجز"
+
+#: .\templates\base.html:127
+msgid "How it works"
+msgstr "كيف يعمل"
+
+#: .\templates\base.html:134
+msgid "Have a Questions?"
+msgstr "هل لديك أسئلة ؟"
+
+#: .\templates\base.html:155
+msgid "Copyright"
+msgstr "حقوق النشر"
+
+#: .\templates\base.html:155
+msgid "All rights reserved"
+msgstr "كل الحقوق محفوظة"
+
+#: .\templates\base.html:155
+msgid "This website is made by"
+msgstr "تم إنشاء هذا الموقع بواسطة"
+
+#: .\templates\base.html:155
+msgid "Bilal Qwider"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Our"
+#~ msgstr "ما"
+
+#~ msgid "Clients' Feedback"
+#~ msgstr "آراء العملاء"
