@@ -7524,6 +7524,18 @@ h1, h2, h3, h4, h5,
 
   }
 }
+@media (min-width: 360px) {
+  .c {
+    background-size: contain;
+    background-position: center;
+    height: 225px;
+    width: 360px;
+    padding: 0;
+    margin: 0;
+
+  }
+}
+
 
 
 
