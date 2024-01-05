@@ -7471,68 +7471,67 @@ h1, h2, h3, h4, h5,
   /* Add other styling properties as needed */
 }
 
+@media (min-width: 360px) and (max-width: 767px) {
+  .c {
+    background-size: contain;
+    background-position: center;
+    height: 750px;
+  }
+}
 
- @media (max-width: 575.98px) {
+@media only screen and (min-height: 1440px) {
+  .c {
+    background-size: contain;
+    background-position: center;
+    height: 750px;
+  }
+}
+ @media (device-width: 360px) and (device-height: 740px) {
+  /* Styles for Samsung S8+ in portrait mode */
+  .c {
+    /* Adjust background properties */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    /* Adjust height and other properties */
+    height: 100vh; /* Utilize the full viewport height */
+    padding: 20px; /* Add padding if needed */
+    margin: 0; /* Reset margin */
+    /* Add other necessary styles */
+  }
+ }
+
+@media (max-width: 575.98px) {
   .c {
     background-size: contain;
     background-position: center;
     height: 250px;
-    padding: 0;
-    margin: 0;
-
   }
 }
- @media (min-width: 576px) and (max-width: 767.98px) {
+
+@media (min-width: 576px) and (max-width: 767.98px) {
   .c {
     background-size: contain;
     background-position: center;
     height: 250px;
-    padding: 0;
-    margin: 0;
-
   }
 }
- @media (min-width: 768px) and (max-width: 991.98px) {
+
+@media (min-width: 768px) and (max-width: 991.98px) {
   .c {
     background-size: contain;
     background-position: center;
     height: 450px;
     width: 800px;
-    padding: 0;
-    margin: 0;
-
   }
 }
- @media (min-width: 576px) and (max-width: 767.98px) {
+@media screen and (device-width: 280px) and (device-height: 653px){
   .c {
     background-size: contain;
     background-position: center;
-    height: 250px;
-    padding: 0;
-    margin: 0;
-
-  }
-}
- @media (min-width: 768px) and (max-width: 991.98px) {
-  .c {
-    background-size: contain;
-    background-position: center;
-    height: 450px;
-    width: 800px;
-    padding: 0;
-    margin: 0;
-
-  }
-}
-@media (min-width: 360px) {
-  .c {
-    background-size: contain;
-    background-position: center;
-    height: 225px;
-    width: 360px;
-    padding: 0;
-    margin: 0;
-
+    width: 280px;
+    height: 195px;
   }
 }
 
