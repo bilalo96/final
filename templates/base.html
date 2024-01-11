@@ -41,13 +41,13 @@
       </button>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="/" class="nav-link">{% translate "Home" %}</a></li>
+          <li class="nav-item"><a href="/" class="nav-link" style=color:terqiase>{% translate "Home" %}</a></li>
           <li class="nav-item"><a href="{% url 'about:about' %}" class="nav-link"
-              style=color:red>{% translate "About" %}</a></li>
-          <li class="nav-item"><a href="{% url 'settings:contact' %}" class="nav-link">{% translate "Contact Us" %}</a></li>
-          <li class="nav-item"><a href="{% url 'settings:dashboard' %}" class="nav-link"
-              style=color:red>{% translate "Dashboard" %}</a></li>
-          <li class="nav-item"><a href="{% url 'blog:post_list' %}" class="nav-link">{% translate "Blog"  %}</a></li>
+              style=color:terqiase>{% translate "About" %}</a></li>
+          <li class="nav-item" style=color:terqiase><a href="{% url 'settings:contact' %}" class="nav-link" style=color:terqiase>{% translate "Contact Us" %}</a></li>
+          <li class="nav-item"><a href="{% url 'settings:dashboard' %}" class="nav-link" style=color:terqiase
+              style=color:terqiase>{% translate "Dashboard" %}</a></li>
+          <li class="nav-item"><a href="{% url 'blog:post_list' %}" class="nav-link" style=color:terqiase>{% translate "Blog"  %}</a></li>
           <form action="{% url 'set_language' %}" method="post" class="language-form">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}">
@@ -162,7 +162,7 @@
         <div class="col-md-12 text-center">
 
           <p>
-            {% trans "Copyright" %} &copy; <script>document.write(new Date().getFullYear());</script> {% trans "All rights reserved" %} | {% trans "This website is made by" %} <i class="icon-heart" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mohammad-bilal-qwider-077497245/" target="_blank">{% trans "Bilal Qwider" %}</a><i class="icon-heart" aria-hidden="true"></i>
+            {% trans "Copyright" %} &copy; <script>document.write(new Date().getFullYear());</script> {% trans "All rights reserved" %} | {% trans "This website is made by" %} <i  aria-hidden="true"></i><a href="https://www.linkedin.com/in/mohammad-bilal-qwider-077497245/" target="_blank">{% trans "TuringWeb " %}</a><i aria-hidden="true"></i>
           </p>
         </div>
       </div>
