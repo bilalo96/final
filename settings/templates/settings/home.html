@@ -2,48 +2,47 @@
 {% load static %}
 {% load i18n %}
 {% block body %}
-<div class="c" style="background-image:url({% static 'images/21.png' %});">
-</div>
-<section class="ftco-section">
-<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
-    <div class="container">
-        <div class="col-md-9 col-sm-12 ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong><br></strong></h1>
-            <div class="block-17 my-4">
+<div class="c" style="background-image:url({% static 'images/21.png' %});"></div>
+<div
+	data-scrollax-parent="true">
+	<div class="container">
+		<div class="col-md-9 col-sm-12 ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+			<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong><br></strong></h1>
+			<div class="block-17 my-4">
 				<p style="color: turquoise;">{% translate "Search what do you prefer" %}</p>
-                <form action="{% url 'home:home_search' %}" method="get" class="d-block d-sm-flex">
+				<form action="{% url 'home:home_search' %}" method="get" class="d-block d-sm-flex">
 					<div class="fields d-block d-sm-flex">
-                        <div class="textfield-search one-third">
-                            <input type="text" class="form-control" name="name" placeholder="Ex: BMW, KIA, ETC">
-                        </div>
-                    </div>
-					<input type="submit" class="search-submit btn btn-primary ml-0 ml-sm-2 mt-2 mt-sm-0" value="{% translate 'Search' %}">
-                </form>
-            </div>
-			<p style="color: turquoise;">{% translate "Or browse the Type" %}</p>
-			<div class="container">
-				{% for category in category %}
-				<div class="col-md-3 col-sm-6 mb-4">
-					<div class="card p-2 text-center">
-						<img src="{{ category.image.url }}" class="card-img-top" style="max-height: 50px; max-width: 50px;" alt="Category Image">
-						<div class="card-body p-0">
-							<h6 class="card-title mb-0"  class="btn btn-sm btn-primary mt-2" style="color: black;">{{ category.name }}</h6>
-							<a href="{% url 'home:category_filter' category %}"  class="btn btn-sm btn-primary mt-2">{% translate "Explore" %}</a>
+						<div class="textfield-search one-third">
+							<input type="text" class="form-control" name="name" placeholder="Ex: BMW, KIA, ETC">
 						</div>
 					</div>
-				</div>
-				{% endfor %}
+					<input type="submit" class="search-submit btn btn-primary ml-0 ml-sm-2 mt-2 mt-sm-0"
+						value="{% translate 'Search' %}">
+				</form>
 			</div>
-        </div>
-    </div>
-</div>
+			<div class="container">
+				<p style="color: turquoise;">{% translate "Or browse the Type" %}</p>
+				<div class="row">
+						{% for category in category %}
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+							<div class="card p-2 text-center">
+								<img src="{{ category.image.url }}" class="card-img-top img-fluid"
+									style="max-height: 50px; max-width: 50px;" alt="Category Image">
+								<div class="card-body p-0">
+									<h6 class="card-title mb-0" style="color: black;">{{ category.name }}</h6>
+									<a href="{% url 'home:category_filter' category %}"
+										class="btn btn-sm btn-primary mt-2">{% translate "Explore" %}</a>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+ </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section class="ftco-section">
+<section>
 	<div class="container">
 		<div class="row justify-content-start mb-5 pb-3">
 			<div class="col-md-9 col-sm-12 heading-section ftco-animate">
@@ -52,9 +51,10 @@
 		</div>
 		<div class="row">
 			{% for Sport in Sport_list %}
-			<div class="col-md-6 col-lg-3 ftco-animate">
+			<div class="col-md-6 col-lg-3 col-12 ftco-animate">
 				<div class="destination">
-					<a href="{{Sport.get_absolute_url}}" class="img img-2 d-flex justify-content-center align-items-center"
+					<a href="{{Sport.get_absolute_url}}"
+						class="img img-2 d-flex justify-content-center align-items-center"
 						style="background-image: url({{Sport.image.url}});">
 						<div class="icon d-flex justify-content-center align-items-center">
 							<span class="icon-search2"></span>
@@ -70,17 +70,22 @@
 							<i class="icon-star"></i>
 							<span>5 {% translate "Rating" %}</span>
 							<div class="two">
-								<span class="price per-price">{% translate "AED" %}{{Sport.price}}<br><small>/{% translate "night" %}</small></span>
-							</div>						</p>
+								<span
+									class="price per-price">{% translate "AED" %}{{Sport.price}}<br><small>/{% translate "night" %}</small></span>
+							</div>
+						</p>
 						<p>{{Sport.description}}</p>
 						<hr>
 						<p class="bottom-area d-flex">
 							<span><i class="icon-map-o"></i> {% translate "Dubai" %}, {% translate "UAE" %}</span>
-							<span class="ml-auto"><a href="https://wa.me/+971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F">{% translate "Book Now" %} </strong></a></span>
+							<span class="ml-auto"><a
+									href="https://wa.me/+971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F">{% translate "Book Now" %}
+									</strong></a></span>
 						</p>
 						<p class="bottom-area d-flex">
-						     <span class="ml-auto"><a href="{{Sport.get_absolute_url}}">{% translate "Discover" %}</a></span>
-					    </p>
+							<span class="ml-auto"><a
+									href="{{Sport.get_absolute_url}}">{% translate "Discover" %}</a></span>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -90,7 +95,8 @@
 			{% for Sedan in Sedan_list %}
 			<div class="col-md-6 col-lg-3 ftco-animate">
 				<div class="destination">
-					<a href="{{Sedan.get_absolute_url}}" class="img img-2 d-flex justify-content-center align-items-center"
+					<a href="{{Sedan.get_absolute_url}}"
+						class="img img-2 d-flex justify-content-center align-items-center"
 						style="background-image: url({{Sedan.image.url}});">
 						<div class="icon d-flex justify-content-center align-items-center">
 							<span class="icon-search2"></span>
@@ -106,18 +112,22 @@
 							<i class="icon-star"></i>
 							<span>5 {% translate "Rating" %}</span>
 							<div class="two">
-								<span class="price per-price">{% translate "AED" %}{{Sedan.price}}<br><small>/{% translate "night" %}</small></span>
+								<span
+									class="price per-price">{% translate "AED" %}{{Sedan.price}}<br><small>/{% translate "night" %}</small></span>
 							</div>
 						</p>
 						<p>{{Sedan.description}}</p>
 						<hr>
 						<p class="bottom-area d-flex">
 							<span><i class="icon-map-o"></i> {% translate "Dubai" %},{% translate "UAE" %} </span>
-							<span class="ml-auto"><a href="https://wa.me/+971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F"> {% translate "Book Now" %}</strong></a></span>
+							<span class="ml-auto"><a
+									href="https://wa.me/+971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F">
+									{% translate "Book Now" %}</strong></a></span>
 						</p>
 						<p class="bottom-area d-flex">
-						     <span class="ml-auto"><a href="{{Sedan.get_absolute_url}}">{% translate "Discover" %}</a></span>
-					    </p>
+							<span class="ml-auto"><a
+									href="{{Sedan.get_absolute_url}}">{% translate "Discover" %}</a></span>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -152,13 +162,13 @@
 							</div>
 						</div>
 					</div>
-						<div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<strong class="number" data-number=15>1000</strong>
-									<span>{% translate "Partner" %}</span>
-								</div>
+					<div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+						<div class="block-18 text-center">
+							<div class="text">
+								<strong class="number" data-number=15>1000</strong>
+								<span>{% translate "Partner" %}</span>
 							</div>
+						</div>
 					</div>
 					<div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 						<div class="block-18 text-center">
@@ -168,11 +178,11 @@
 							</div>
 						</div>
 					</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	</div>
 	</div>
 </section>
 
@@ -182,10 +192,13 @@
 			<div class="col-md-5 heading-section ftco-animate">
 				<span class="subheading"></span>
 				<h2 class="mb-4 pb-3"><strong>{% translate "Why" %}</strong> {% translate "Choose Us?" %}</h2>
-				<p>{% trans "We offer economical and instant car rental services in Dubai and the United Arab Emirates. We have extensive experience in car rentals in Dubai, providing regular maintenance for all rental cars throughout the year. We offer special deals for women's car rentals as well as discounts for students." %}</p>
-				<p>{% trans "We have daily offers on cars for rent in Dubai all year round with a discount of up to 50% at cheap and economical prices." %}</p>
+				<p>{% trans "We offer economical and instant car rental services in Dubai and the United Arab Emirates. We have extensive experience in car rentals in Dubai, providing regular maintenance for all rental cars throughout the year. We offer special deals for women's car rentals as well as discounts for students." %}
+				</p>
+				<p>{% trans "We have daily offers on cars for rent in Dubai all year round with a discount of up to 50% at cheap and economical prices." %}
+				</p>
 
-				<p><a href="{% url 'about:about' %}" class="btn btn-primary btn-outline-primary mt-4 px-4 py-3">{% translate "Read more" %}</a></p>
+				<p><a href="{% url 'about:about' %}"
+						class="btn btn-primary btn-outline-primary mt-4 px-4 py-3">{% translate "Read more" %}</a></p>
 			</div>
 			<div class="col-md-1"></div>
 			<div class="col-md-6 heading-section ftco-animate">
@@ -196,13 +209,16 @@
 						<div class="carousel-testimony owl-carousel">
 							<div class="item">
 								<div class="testimony-wrap d-flex">
-									<div class="user-img mb-5" style="background-image: url({% static 'images/14.jpg' %})">
+									<div class="user-img mb-5"
+										style="background-image: url({% static 'images/14.jpg' %})">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="icon-quote-left"></i>
 										</span>
 									</div>
 									<div class="text ml-md-4">
-										<p class="mb-5">{% translate "I've had an exceptional experience with Speed Switch Car Rentals. Their fleet is modern, well-maintained, and offers a variety of options to suit different needs. The customer service is top-notch - their staff is not only friendly but also knowledgeable, providing helpful guidance on selecting the best vehicle for my requirements. Additionally, their booking process is seamless, making it convenient to reserve a car hassle-free. I appreciate their commitment to ensuring a smooth and enjoyable experience, making them my go-to choice whenever I need a reliable car rental service." %}</p>
+										<p class="mb-5">
+											{% translate "I've had an exceptional experience with Speed Switch Car Rentals. Their fleet is modern, well-maintained, and offers a variety of options to suit different needs. The customer service is top-notch - their staff is not only friendly but also knowledgeable, providing helpful guidance on selecting the best vehicle for my requirements. Additionally, their booking process is seamless, making it convenient to reserve a car hassle-free. I appreciate their commitment to ensuring a smooth and enjoyable experience, making them my go-to choice whenever I need a reliable car rental service." %}
+										</p>
 
 										<p class="name">Bilal</p>
 										<span class="position">{% translate "client from london" %}</span>
@@ -211,13 +227,16 @@
 							</div>
 							<div class="item">
 								<div class="testimony-wrap d-flex">
-									<div class="user-img mb-5" style="background-image: url({% static 'images/13.jpg' %})">
+									<div class="user-img mb-5"
+										style="background-image: url({% static 'images/13.jpg' %})">
 										<span class="quote d-flex align-items-center justify-content-center">
 											<i class="icon-quote-left"></i>
 										</span>
 									</div>
 									<div class="text ml-md-4">
-										<p class="mb-5">{% translate "Speed Switch Car Rental has truly impressed me with their exceptional service. From the moment I made my reservation to the drop-off, everything was smooth and efficient. Their fleet consists of top-quality vehicles that are not only reliable but also well-maintained, ensuring a comfortable and safe drive every time." %}</p>
+										<p class="mb-5">
+											{% translate "Speed Switch Car Rental has truly impressed me with their exceptional service. From the moment I made my reservation to the drop-off, everything was smooth and efficient. Their fleet consists of top-quality vehicles that are not only reliable but also well-maintained, ensuring a comfortable and safe drive every time." %}
+										</p>
 										<p class="name">Mohammad Ali</p>
 										<span class="position">{% translate "Guest from syria" %}</span>
 									</div>
@@ -243,9 +262,10 @@
 		</div>
 		<div class="row d-flex">
 			{% for post in recent_posts %}
-			 <div class="col-md-3 d-flex ftco-animate">
+			<div class="col-md-3 d-flex ftco-animate">
 				<div class="blog-entry align-self-stretch">
-					<a href="{{post.get_absolute_url}}" class="block-20" style="background-image: url({{post.images.url}});">
+					<a href="{{post.get_absolute_url}}" class="block-20"
+						style="background-image: url({{post.images.url}});">
 					</a>
 					<div class="text p-4 d-block">
 						<span class="tag">{{post.tag}}</span>
@@ -257,35 +277,38 @@
 						</div>
 					</div>
 				</div>
-			 </div>
+			</div>
 			{% endfor %}
 		</div>
 	</div>
 </section>
 <section class="ftco-section ftco-counter img" id="section-counter">
 	<div class="parallax-img d-flex align-items-center">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div  id="main_div"  class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-							<h2>{% translate "Subcribe to our Newsletter" %}</h2>
-							<div class="row d-flex justify-content-center mt-5">
-								<div class="col-md-8">
-									<form  id='newsletter_form'  action="{% url 'home:newsletter' %}" class="subscribe-form" method="POST">
-										{% csrf_token %}
-										<div class="form-group d-flex">
-											<input type="text" class="form-control" name="emailInput"  placeholder="Enter email address">
-											<input type="submit" value="Subscribe"  class="submit px-3">
-										</div>
-									</form>
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div id="main_div" class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+					<h2>{% translate "Subcribe to our Newsletter" %}</h2>
+					<div class="row d-flex justify-content-center mt-5">
+						<div class="col-md-8">
+							<form id='newsletter_form' action="{% url 'home:newsletter' %}" class="subscribe-form"
+								method="POST">
+								{% csrf_token %}
+								<div class="form-group d-flex">
+									<input type="text" class="form-control" name="emailInput"
+										placeholder="Enter email address">
+									<input type="submit" value="Subscribe" class="submit px-3">
 								</div>
-							</div>
-						</div>
-						<div  id="success_div"  style="display:none;" class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-							<h6>{% translate "Thanks Subcribed to our Newsletter" %}</h6>
+							</form>
 						</div>
 					</div>
 				</div>
+				<div id="success_div" style="display:none;"
+					class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+					<h6>{% translate "Thanks Subcribed to our Newsletter" %}</h6>
+				</div>
 			</div>
+		</div>
+	</div>
 </section>
 <section class="ftco-section services-section bg-light">
 	<div class="container">
@@ -337,9 +360,10 @@
 		</div>
 	</div>
 </section>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
-	$("#newsletter_form").submit(function(e){
+	$("#newsletter_form").submit(function (e) {
 		e.preventDefault();
 
 		var form = $(this);
@@ -349,7 +373,7 @@
 			type: "POST",
 			url: url,
 			data: form.serialize(),
-			success: function(data){
+			success: function (data) {
 				document.getElementById('main_div').style.display = "none";
 				document.getElementById('success_div').style.display = "block";
 			}
