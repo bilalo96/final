@@ -54,9 +54,7 @@ INSTALLED_APPS = [
     'taggit',
     'tof',
 ]
-if DEVELOPMENT_MODE is True:
-    # Tailwind hot reloader / browser reload for development environment
-    MIDDLEWARE.append("django_browser_reload.middleware.BrowserReloadMiddleware")
+
 
 
 REST_FRAMEWORK = {
@@ -64,6 +62,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ]
 }
+
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,6 +76,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+if DEVELOPMENT_MODE is True:
+    # Tailwind hot reloader / browser reload for development environment
+    MIDDLEWARE.append("django_browser_reload.middleware.BrowserReloadMiddleware")
 
 ROOT_URLCONF = 'project.urls'
 
