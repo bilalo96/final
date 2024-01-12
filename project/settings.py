@@ -54,7 +54,9 @@ INSTALLED_APPS = [
     'taggit',
     'tof',
 ]
-
+if DEVELOPMENT_MODE is True:
+    # Tailwind hot reloader / browser reload for development environment
+    MIDDLEWARE.append("django_browser_reload.middleware.BrowserReloadMiddleware")
 
 
 REST_FRAMEWORK = {
