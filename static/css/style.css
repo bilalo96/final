@@ -7471,13 +7471,6 @@ h1, h2, h3, h4, h5,
   /* Add other styling properties as needed */
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
-  .c {
-    background-size: contain;
-    background-position: center;
-    height: 750px;
-  }
-}
 
 @media only screen and (min-height: 1440px) {
   .c {
@@ -7486,7 +7479,7 @@ h1, h2, h3, h4, h5,
     height: 750px;
   }
 }
- @media (device-width: 360px) and (device-height: 740px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
   /* Styles for Samsung S8+ in portrait mode */
   .c {
     /* Adjust background properties */
@@ -7495,9 +7488,9 @@ h1, h2, h3, h4, h5,
     background-repeat: no-repeat;
     height: 550px;
     /* Adjust height and other properties */
-    height: 100vh; /* Utilize the full viewport height */
-    padding: 20px; /* Add padding if needed */
-    margin: 0; /* Reset margin */
+    height: 400pxs; /* Utilize the full viewport height */
+     /* Add padding if needed */
+     /* Reset margin */
     /* Add other necessary styles */
   }
  }
@@ -7526,12 +7519,109 @@ h1, h2, h3, h4, h5,
     width: 800px;
   }
 }
-@media screen and (device-width: 280px) and (device-height: 653px){
+@media (device-width: 280px) and (device-height: 653px){
   .c {
     background-size: contain;
     background-position: center;
     width: 280px;
     height: 195px;
+  }
+}
+@media (device-width: 768px) and (device-height: 1024px){
+  .c {
+    background-size: contain;
+    background-position: center;
+    width:  768px;
+    height: 450px;
+  }
+}
+
+@media (device-width: 844px) and (device-height: 390px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 475px;
+    width: 844px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+@media (device-width: 932px) and (device-height: 430px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 475px;
+    width: 932px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+@media (device-width: 915px) and (device-height: 412px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    width: 915px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+@media (device-width: 736px) and (device-height: 414px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 425px;
+    width: 736px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+@media (device-width: 914px) and (device-height: 412px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 914px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+@media (device-width: 667px) and (device-height: 375px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 370px;
+    width: 667px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+ @media (device-width: 896px) and (device-height: 414px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 425px;
+    width:896px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
+  }
+}
+@media (device-width:740px) and (device-height: 360px) and (orientation: landscape) {
+  /* Styles for the specified landscape resolution */
+  .c {
+    background-size: cover;
+    background-position: center;
+    height: 425px;
+    width:740px;
+    /* Adjust height as needed */
+    /* Add other necessary styles */
   }
 }
 
