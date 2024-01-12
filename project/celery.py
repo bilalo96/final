@@ -11,7 +11,7 @@ from django.conf import settings
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
-app = Celery("project",broker='redis://localhost:6379/0')
+app = Celery("project",CELERY_BROKER_URL='redis://localhost:6379/0')
 app.config_from_object("django.conf:settings", namespace="CELERY")
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
