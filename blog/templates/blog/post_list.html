@@ -4,50 +4,7 @@
 {% load bootstrap4 %}
 {% block body %}
 
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="/">{{myfooter.name}}</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="/" class="nav-link" style=color:orange>{% translate "Home" %}</a></li>
-          <li class="nav-item"><a href="{% url 'about:about' %}" class="nav-link"
-              style=color:orange>{% translate "About" %}</a></li>
-          <li class="nav-item" style=color:orange><a href="{% url 'settings:contact' %}" class="nav-link" style=color:orange>{% translate "Contact Us" %}</a></li>
-          <li class="nav-item"><a href="{% url 'settings:dashboard' %}" class="nav-link" style=color:orange
-              style=color:orange>{% translate "Dashboard" %}</a></li>
-          <li class="nav-item"><a href="{% url 'blog:post_list' %}" class="nav-link" style=color:orange>{% translate "Blog"  %}</a></li>
-          <form action="{% url 'set_language' %}" method="post" class="language-form">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="{{ redirect_to }}">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
-                {% for language in languages %}
-                  {% if language.code == LANGUAGE_CODE %}
-                    {{ language.name_local }} ({{ language.code }})
-                  {% endif %}
-                {% endfor %}
-              </button>
-              <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                {% for language in languages %}
-                  <button class="dropdown-item" type="submit" name="language" value="{{ language.code }}">
-                    {{ language.name_local }} ({{ language.code }})
-                  </button>
-                {% endfor %}
-              </div>
-            </div>
-          </form>
 
-        </ul>
-      </div>
-    </div>
-  </nav>
  <div class="c" style="background-image: url({% static 'images/bg_3.jpg' %});">
     <div class="overlay"></div>
     <div class="container">
