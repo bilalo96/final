@@ -61,7 +61,7 @@
 						</div>
 					</a>
 					<div class="text p-3">
-						<h3><a href="{{car.get_absolute_url}}">{{Sport}}</a></h3>
+						<h3><a href="{{Sport.get_absolute_url}}" {{Sport}}>{{Sport}}</a></h3>
 						<p class="rate">
 							<i class="icon-star"></i>
 							<i class="icon-star"></i>
@@ -103,7 +103,7 @@
 						</div>
 					</a>
 					<div class="text p-3">
-						<h3><a href="{{Sedan.get_absolute_url}}">{{Sedan}}</a></h3>
+						<h3><a href="{{Sedan.get_absolute_url}}" {{Sedan}}>{{Sedan}}</a></h3>
 						<p class="rate">
 							<i class="icon-star"></i>
 							<i class="icon-star"></i>
@@ -206,7 +206,6 @@
 				<h2 class="mb-4 pb-3"><strong>{% translate "Our clients Say" %}</strong></h2>
 				<div class="row ftco-animate">
 					<div class="col-md-12">
-						<div class="carousel-testimony owl-carousel">
 							<div class="item">
 								<div class="testimony-wrap d-flex">
 									<div class="user-img mb-5"
