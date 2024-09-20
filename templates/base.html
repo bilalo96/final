@@ -14,9 +14,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>SpeedSwitchCarRental</title>
+  <link rel="icon" href="{% static 'images/icon.jpg' %}" type="image/x-icon">
+</head>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
@@ -50,30 +55,31 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="/" class="nav-link" style=color:terqiase>{% translate "Home" %}</a></li>
           <li class="nav-item"><a href="{% url 'about:about' %}" class="nav-link"
-              style=color:terqiase>{% translate "About" %}</a></li>
-          <li class="nav-item" style=color:terqiase><a href="{% url 'settings:contact' %}" class="nav-link" style=color:terqiase>{% translate "Contact Us" %}</a></li>
-          <li class="nav-item"><a href="{% url 'settings:dashboard' %}" class="nav-link" style=color:terqiase
-              style=color:terqiase>{% translate "Dashboard" %}</a></li>
-          <li class="nav-item"><a href="{% url 'blog:post_list' %}" class="nav-link" style=color:terqiase>{% translate "Blog"  %}</a></li>
+              style=color:red>{% translate "About" %}</a></li>
+          <li class="nav-item"><a href="{% url 'settings:contact' %}" class="nav-link">{% translate "Contact Us" %}</a></li>
+          <li class="nav-item"><a href="{% url 'settings:dashboard' %}" class="nav-link"
+              style=color:red>{% translate "Dashboard" %}</a></li>
+          <li class="nav-item"><a href="{% url 'blog:post_list' %}" class="nav-link">{% translate "Blog"  %}</a></li>
           <form action="{% url 'set_language' %}" method="post" class="language-form">
             {% csrf_token %}
             <input name="next" type="hidden" value="{{ redirect_to }}">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {% get_current_language as LANGUAGE_CODE %}
                 {% get_available_languages as LANGUAGES %}
                 {% get_language_info_list for LANGUAGES as languages %}
                 {% for language in languages %}
-                  {% if language.code == LANGUAGE_CODE %}
-                    {{ language.name_local }} ({{ language.code }})
-                  {% endif %}
+                {% if language.code == LANGUAGE_CODE %}
+                {{ language.name_local }} ({{ language.code }})
+                {% endif %}
                 {% endfor %}
               </button>
               <div class="dropdown-menu" aria-labelledby="languageDropdown">
                 {% for language in languages %}
-                  <button class="dropdown-item" type="submit" name="language" value="{{ language.code }}">
-                    {{ language.name_local }} ({{ language.code }})
-                  </button>
+                <button class="dropdown-item" type="submit" name="language" value="{{ language.code }}">
+                  {{ language.name_local }} ({{ language.code }})
+                </button>
                 {% endfor %}
               </div>
             </div>
@@ -89,8 +95,15 @@
 
   {% endblock body %}
 
-
-
+  <div class="fixed-booking-buttons">
+    <a href="tel:+971523660709" class="btn btn-primary">
+      <i class="fas fa-phone"></i> {% translate "Call Now" %}
+    </a>
+    <a href="https://wa.me/971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F"
+      class="btn btn-success">
+      <i class="fab fa-whatsapp"></i>{% translate "WhatsApp" %}
+    </a>
+  </div>
 
 
 
@@ -120,7 +133,8 @@
             <ul class="list-unstyled">
               <li><a href="{% url 'about:about' %}" class="py-2 d-block">{% trans "About" %}</a></li>
               <li><a href="{% url 'settings:contact' %}" class="py-2 d-block">{% trans "Service" %}</a></li>
-              <li><a href="{% url 'settings:contact' %}" class="py-2 d-block">{% trans "Terms and Conditions" %}</a></li>
+              <li><a href="{% url 'settings:contact' %}" class="py-2 d-block">{% trans "Terms and Conditions" %}</a>
+              </li>
               <li><a href="https://wa.me/+971523660709" class="py-2 d-block">{% trans "Become a partner" %}</a></li>
               <li><a href="https://wa.me/+971523660709" class="py-2 d-block">{% trans "Best Price Guarantee" %}</a></li>
               <li><a href="{% url 'settings:contact' %}" class="py-2 d-block">{% trans "Privacy and Policy" %}</a></li>
@@ -162,7 +176,7 @@
         <div class="col-md-12 text-center">
 
           <p>
-            {% trans "Copyright" %} &copy; <script>document.write(new Date().getFullYear());</script> {% trans "All rights reserved" %} | {% trans "This website is made by" %} <i  aria-hidden="true"></i><a href="https://www.linkedin.com/in/mohammad-bilal-qwider-077497245/" target="_blank">{% trans "TuringWeb " %}</a><i aria-hidden="true"></i>
+            {% trans "Copyright" %} &copy; <script>document.write(new Date().getFullYear());</script> {% trans "All rights reserved" %} | {% trans "This website is made by" %} <i class="icon-heart" aria-hidden="true"></i><a href="https://www.linkedin.com/in/mohammad-bilal-qwider-077497245/" target="_blank">{% trans "Bilal Qwider" %}</a><i class="icon-heart" aria-hidden="true"></i>
           </p>
         </div>
       </div>
@@ -199,36 +213,14 @@
   <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
   <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
   <script src="{% static 'js/scrollax.min.js' %}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiCl6S-4IG7wpZHUtTZpf1ZAkd4iIvseI&sensor=false"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiCl6S-4IG7wpZHUtTZpf1ZAkd4iIvseI&sensor=false">
+  </script>
   <script src="{% static 'js/google-map.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
   <script src="{% static 'js/scrole.js' %}"></script>
-  <script>
-  (function() {
-    document.addEventListener('click', function(e) {
-      if (e.target.closest('a[href^="tel:"]')) {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-11360001724/2EjmCIDUxIkZELy976gq'
-        });
-      }
-    });
-  })();
-</script>
-<script>
-  document.addEventListener('click', function(e){
-    if(e.target.closest('[href*="wa.me"]')){
-      gtag('event', 'conversion', {'send_to': 'AW-11360001724/NqwUCM-vzYkZELy976gq'});
-    }    
-  }, {capture: true});
-</script>  
+
+
+
 </body>
-  <div class="fixed-booking-buttons">
-    <a href="https://wa.me/971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F"
-      class="btn btn-success">
-      <i class="fab fa-whatsapp"></i>{% translate "WhatsApp" %}
-    </a>
-    <a href="tel:+971523660709" class="btn btn-primary">
-      <i class="fas fa-phone"></i> {% translate "Call Now" %}
-    </a>
-  </div>
+
 </html>

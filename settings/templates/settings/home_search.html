@@ -48,7 +48,9 @@
 										</p>
 									</div>
 									<div class="two">
-										<span class="price per-price">{% translate "AED" %}{{car.price}}<br><small>/{% translate "night" %}</small></span>
+										<span class="price per-price">{% translate "AED" %}{{car.price_dialy}}<br><small>/{% translate "day" %}</small></span>
+										<span class="price per-price">{% translate "AED" %}{{car.price_wek}}<br><small>/{% translate "" %}</small></span>
+										<span class="price per-price">{% translate "AED" %}{{car.price_monthly}}<br><small>/{% translate "month" %}</small></span>
 									</div>
 								</div>
 								<p>{{car.description|safe|truncatewords:5}}</p>

@@ -9,10 +9,15 @@ class Car(models.Model):
     owner=models.ForeignKey(User, related_name='car_owner', on_delete=models.CASCADE)
     name=models.CharField(max_length=100)
     image=models.ImageField( upload_to='car/')
-    price=models.IntegerField(default=0)
+    price_dialy = models.IntegerField(default=0)
+    price_wek = models.IntegerField(default=0)
+    price_monthly =models.IntegerField(default=0)
     description=models.TextField(max_length=1000)
     category=models.ForeignKey('Category', related_name='car_category', on_delete=models.CASCADE)
     created_at=models.DateTimeField(default=datetime.datetime.now)
+    starter=models.IntegerField(default=0)
+
+
     slug=models.SlugField(null=True,blank=True)
     def save(self, *args, **kwargs):
        if not self.slug:

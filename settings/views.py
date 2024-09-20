@@ -22,6 +22,7 @@ def home(request):
     Sport_list=Car.objects.filter(category__name='Sport')[:4]
     Economy_list=Car.objects.filter(category__name='Economy')[:4]
     Suv_list=Car.objects.filter(category__name='Suv')[:4]
+    Starter_list=Car.objects.filter(starter=1)
     recent_posts=Post.objects.all()[:4]
     users_count=User.objects.all().count()
     #places_count=Car.objects.filter(category__name='Places').count()
@@ -29,6 +30,8 @@ def home(request):
     Sedan_count=Car.objects.filter(category__name='Sedan').count()
     Sport_count=Car.objects.filter(category__name='Sport').count()
     Suv_count=Car.objects.filter(category__name='Suv').count()
+    Starter_count=Car.objects.filter(starter=1).count()
+
 
     return render(request,'settings/home.html',{
         #'places': places ,
@@ -37,6 +40,7 @@ def home(request):
         'Sport_list':Sport_list,
         'Suv_list':Suv_list,
         'Economy_list':Economy_list,
+        'Starter_list':Starter_list,
         'recent_posts':recent_posts,
         'users_count':users_count,
         #'places_count':places_count,
@@ -44,6 +48,7 @@ def home(request):
         'Sport_count':Sport_count,
         'Economy_count':Economy_count,
         'Suv_count':Suv_count,
+        'Starter_count':Starter_count,
     })
 
 

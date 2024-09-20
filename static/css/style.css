@@ -7463,6 +7463,7 @@ h1, h2, h3, h4, h5,
 
 
 
+
 .c {
   background-size: cover;
   background-position: center;
@@ -7602,29 +7603,6 @@ h1, h2, h3, h4, h5,
     /* Add other necessary styles */
   }
 }
- @media (device-width: 896px) and (device-height: 414px) and (orientation: landscape) {
-  /* Styles for the specified landscape resolution */
-  .c {
-    background-size: cover;
-    background-position: center;
-    height: 425px;
-    width:896px;
-    /* Adjust height as needed */
-    /* Add other necessary styles */
-  }
-}
-@media (device-width:740px) and (device-height: 360px) and (orientation: landscape) {
-  /* Styles for the specified landscape resolution */
-  .c {
-    background-size: cover;
-    background-position: center;
-    height: 425px;
-    width:740px;
-    /* Adjust height as needed */
-    /* Add other necessary styles */
-  }
-}
-
 
 
 
@@ -7753,6 +7731,8 @@ h1, h2, h3, h4, h5,
       color: #000000; }
 
 .owl-carousel {
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative; }
   .owl-carousel .owl-item {
     opacity: .4; }
@@ -7956,6 +7936,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-destination .owl-carousel .owl-stage-outer {
   padding-bottom: 2em;
+  touch-action: pan-y;
   position: relative; }
 
 .destination {
@@ -8043,12 +8024,6 @@ h1, h2, h3, h4, h5,
 .hotel-img {
   height: 600px;
   margin-bottom: 2em; }
-  @media screen and (max-width: 768px) {
-    .hotel-img {
-      height: 200px;
-    }
-  }
-
 
 .hotel-single h2 {
   font-size: 28px; }

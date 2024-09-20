@@ -10,7 +10,7 @@ class CarImagesInline(admin.TabularInline):
 
 class SomeModelAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
-    list_display = ('name', 'price', 'get_avg_rating', 'check_availability')
+    list_display = ('name', 'price_dialy','price_wek','price_monthly', 'get_avg_rating', 'check_availability','starter')
 
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
