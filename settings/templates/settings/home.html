@@ -73,9 +73,9 @@
 							<span>5 {% translate "Rating" %}</span>
 							<div class="two">
 								<span
-									class="price per-price">{% translate "AED" %}{{Starter.price_dialy}}<small>/{% translate "day" %}</small></span>
+									class="price per-price">{% translate "From" %}<br>{{Starter.price_dialy}}{% translate "AED" %}<small>/{% translate "Day" %}</small></span>
 									<span
-									class="price per-price">{% translate "AED" %}{{Starter.price_wek}}<small>/{% translate "week" %}</small></span>
+									class="price per-price">{% translate "To" %}<br>{{Starter.price_wek}}{% translate "AED" %}<small>/{% translate "Day" %}</small></span>
 									<span
 									class="price per-price">{% translate "AED" %}{{Starter.price_monthly}}<small>/{% translate "month" %}</small></span>
 							</div>
@@ -83,13 +83,14 @@
 						<p>{{Starter.description}}</p>
 						<hr>
 						<p class="bottom-area d-flex">
-							<span><i class="icon-map-o"></i> {% translate "Dubai" %},{% translate "UAE" %}</span>
+							<span><i class="icon-map-o"></i> {% translate "business bay" %}</span>
 							<span class="ml-auto"><a
 									href="https://wa.me/+971523660709?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20car%20services%20you%20provide?%0A%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A7%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D8%AA%D9%82%D8%AF%D9%85%D9%88%D9%86%D9%87%D8%A7%20%D8%9F">{% translate "Book Now" %}
 									</strong></a></span>
 						</p>
                       <br>
 						<p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> {% translate "Dubai" %},{% translate "UAE" %}</span>
 							<span class="ml-auto"><a
 									href="{{Starter.get_absolute_url}}">{% translate "Discover" %}</a></span>
 						</p>
