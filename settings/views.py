@@ -15,6 +15,7 @@ from blog import models as blog_models
 from car import models as car_models
 from django.http import JsonResponse
 from django.core.paginator import Paginator
+from .models import Testimonial
 
 
 # Create your views here.
@@ -158,6 +159,10 @@ def news_letter_subscribe(request):
     email = request.POST.get('emailInput')
     NewsLetter.objects.create(email=email)
     return JsonResponse({'done':'done '})
+
+def testimonials_view(request):
+    testimonials = Testimonial.objects.filter(is_active=True)
+    return render(request, 'settings/home.html', {'testimonials': testimonials})
 
 
 

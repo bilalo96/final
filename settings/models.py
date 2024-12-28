@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
+
 
 # Create your models here.
 
@@ -74,3 +76,14 @@ class NewsLetter(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=255, verbose_name=_("Name"))
+    position = models.CharField(max_length=255, verbose_name=_("Position"))
+    country = models.CharField(max_length=255, verbose_name=_("Country"), blank=True, null=True)
+    message = models.TextField(verbose_name=_("Message"))
+    is_active = models.BooleanField(default=True, verbose_name=_("Active"))
+
+    def __str__(self):
+        return self.name

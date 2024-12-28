@@ -163,9 +163,79 @@
                         class="btn btn-primary btn-outline-primary mt-4 px-4 py-3">{% translate "Read more" %}</a></p>
             </div>
             <div class="col-md-1"></div>
+            <div class="col-md-6 heading-section ftco-animate">
+                <span class="subheading"></span>
+                <h2 class="mb-4 pb-3"><strong>{% translate "Welcome to Speed Switch Car Rental" %}</strong></h2>
+                <div class="row ftco-animate">
+                    <div class="col-md-12">
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mb-5" style="background-image: url({% static 'images/a1.webp' %})">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="icon-quote-left"></i>
+                                    </span>
+                                </div>
+                                <div class="text ml-md-4">
+                                    <p class="mb-5">
+                                        {% blocktrans %}
+                                        Experience the ultimate in style and performance with our premium luxury car
+                                        rental Dubai services. Switch Car Rental offers a wide selection of high-end
+                                        vehicles, including exotic car rental Dubai options such as Lamborghinis,
+                                        Ferraris, Bentleys, and Aston Martins. Whether you’re seeking a sport car rental
+                                        Dubai experience or looking to rent a luxury car in Dubai for business or
+                                        leisure, we have the perfect vehicle to match your needs.
+                                        Drive the iconic streets of Dubai in a Lamborghini Huracán, a Ferrari F8
+                                        Tributo, or a luxury SUV like the Mercedes G63. Our fleet ensures unparalleled
+                                        comfort, performance, and style. Book now to rent Lamborghini in Dubai, rent
+                                        Ferrari in Dubai, or choose from our exclusive range of exotic vehicles.
+                                        Speed Switch Car Rental is your trusted partner for unforgettable journeys in
+                                        Dubai’s luxurious landscape.
+                                        {% endblocktrans %}
+                                    </p>
+                                    <p class="name">we are  Your Gateway to Luxury and Exotic Cars in Dubai
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mb-5" style="background-image: url({% static 'images/a2.webp' %})">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="icon-quote-left"></i>
+                                    </span>
+                                </div>
+                                <div class="text ml-md-4">
+                                    <p class="mb-5">
+                                        {% blocktrans %}
+                                        Elevate your travel experience with Speed Switch Car Rental, the leading
+                                        provider of luxury car rental Dubai and SUV rental Dubai services. Choose from
+                                        an exclusive collection of high-performance vehicles, including exotic car
+                                        rental Dubai options like Lamborghini, Ferrari, and Bentley, or premium SUVs
+                                        such as the Mercedes G63, Lamborghini Urus, and Range Rover Vogue.
+
+                                        Whether you’re here for business or leisure, our sport car rental Dubai and
+                                        luxury SUV rental Dubai services ensure you travel in style, comfort, and
+                                        sophistication. Looking to rent a luxury car in Dubai or explore the city in a
+                                        powerful SUV? We have the perfect vehicle to suit your needs.
+
+                                        Drive the streets of Dubai in world-class luxury. Book now to rent Lamborghini
+                                        in Dubai, rent Ferrari in Dubai, or choose from our premium SUVs for an
+                                        unforgettable experience. Speed Switch Car Rental – where luxury meets
+                                        performance.
+                                        {% endblocktrans %} </p>
+                                    <p class="name">Discover Premium Luxury and SUV Rentals in Dubai</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+
+
 
 
 
@@ -285,18 +355,18 @@
         <h2>Google Reviews</h2>
         <div id="reviews-container">
             {% if reviews %}
-                {% for review in reviews|slice:":5" %}
-                <div class="review">
-                    <h4>{{ review.author_name|default:"Unknown Author" }}</h4>
-                    <p class="rating">
-                        <div class="stars-container">
-                            <div class="stars" data-rating="{{ review.rating|default:0 }}"></div>
-                        </div>
-                        Rating: {{ review.rating|default:"N/A" }}
-                    </p>
-                    <p>{{ review.text|default:"No review text available." }}</p>
-                </div>
-                {% endfor %}
+            {% for review in reviews|slice:":5" %}
+            <div class="review">
+                <h4>{{ review.author_name|default:"Unknown Author" }}</h4>
+                <p class="rating">
+                    <div class="stars-container">
+                        <div class="stars" data-rating="{{ review.rating|default:0 }}"></div>
+                    </div>
+                    Rating: {{ review.rating|default:"N/A" }}
+                </p>
+                <p>{{ review.text|default:"No review text available." }}</p>
+            </div>
+            {% endfor %}
             {% else %}
             <p class="no-reviews-message">No reviews available.</p>
             {% endif %}
@@ -304,10 +374,10 @@
     </div>
 
 
-        <button id="load-more">
-            <a href="https://maps.app.goo.gl/aGySWveZ6Z66k4FL7?g_st=com.google.maps.preview.copy">Read More</a>
-        </button>
-     </div>
+    <button id="load-more">
+        <a href="https://maps.app.goo.gl/aGySWveZ6Z66k4FL7?g_st=com.google.maps.preview.copy">Read More</a>
+    </button>
+    </div>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -368,29 +438,29 @@
             })
             .catch(error => console.error('Error fetching reviews:', error));
     });
-            const reviewsContainer = document.querySelector('.reviews-section');
+    const reviewsContainer = document.querySelector('.reviews-section');
 
-        if (!reviewsContainer) {
-            console.error('Error: .reviews-section element not found.');
-            return; // الخروج إذا لم يتم العثور على العنصر
-        }
+    if (!reviewsContainer) {
+        console.error('Error: .reviews-section element not found.');
+        return; // الخروج إذا لم يتم العثور على العنصر
+    }
 
-        fetch('/reviews/?page=1')
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                return response.json();
-            })
-            .then(data => {
-                if (!data.reviews || !Array.isArray(data.reviews)) {
-                    throw new Error('Invalid reviews data format.');
-                }
+    fetch('/reviews/?page=1')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            if (!data.reviews || !Array.isArray(data.reviews)) {
+                throw new Error('Invalid reviews data format.');
+            }
 
-                const reviewsToShow = data.reviews.slice(0, 5); // عرض أول 5 تعليقات فقط
+            const reviewsToShow = data.reviews.slice(0, 5); // عرض أول 5 تعليقات فقط
 
-                reviewsToShow.forEach(review => {
-                    const reviewDiv = document.createElement('div');
-                    reviewDiv.classList.add('review');
-                    reviewDiv.innerHTML = `
+            reviewsToShow.forEach(review => {
+                const reviewDiv = document.createElement('div');
+                reviewDiv.classList.add('review');
+                reviewDiv.innerHTML = `
                         <h4>${review.author_name}</h4>
                         <p class="rating">
                             <div class="stars-container">
@@ -400,11 +470,11 @@
                         </p>
                         <p>${review.text}</p>
                     `;
-                    reviewsContainer.appendChild(reviewDiv);
-                });
-            })
-            .catch(error => console.error('Error fetching reviews:', error));
-       });
+                reviewsContainer.appendChild(reviewDiv);
+            });
+        })
+        .catch(error => console.error('Error fetching reviews:', error));
+    });
 
     document.addEventListener("DOMContentLoaded", function () {
         const loadMoreButton = document.getElementById('load-more');
@@ -416,7 +486,8 @@
 
         loadMoreButton.addEventListener('click', function () {
             // الانتقال إلى الرابط
-            window.location.href = "https://maps.app.goo.gl/aGySWveZ6Z66k4FL7?g_st=com.google.maps.preview.copy";
+            window.location.href =
+                "https://maps.app.goo.gl/aGySWveZ6Z66k4FL7?g_st=com.google.maps.preview.copy";
         });
     });
 </script>

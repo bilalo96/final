@@ -16,5 +16,4 @@ urlpatterns = [
     path('about/api/faq',api_view.faq_api,name='faq_api'),
     path('contact/api',api_view.contact_api,name='contact_api'),
     path('reviews/',reviews_view, name='reviews_view'),  # هنا يتم استدعاء الدالة الجديدة
-
 ]
